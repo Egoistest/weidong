@@ -9,11 +9,43 @@
 <!doctype html>
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <base href="<%=basePath%>"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style type="text/css">
-        *{
-            margin: 0;
-            padding: 0;
+        html{
+            position:relative;
+            min-height:100%;}
+        body{
+            width:100%;
+            margin-bottom:60px;
+
+            background-repeat: repeat-x;
         }
+        a{color:#000;}
+        a:hover{
+            color:#F00;
+            text-decoration:none;
+        }
+        #foot{
+            position:absolute;
+            bottom:0;
+            width:100%;
+            height:60px;
+            background-color:#f5f5f5;
+        }
+        .navbar-default .navbar-nav{
+            text-align:center;
+            float:none;}
+        .navbar-default .navbar-nav li{
+            display:inline-block;
+            float:none;}
+
+
+
         #wrap {
             height: 719px;
             width: 100%;
@@ -24,20 +56,6 @@
             position: relative;
         }
 
-        #head {
-
-            height: 120px;
-            width: 100%;
-            background-color: #C0EC76;
-            text-align: center;
-            position: relative;
-        }
-        #foot {
-            width: 100%;
-            height: 126px;
-            background-color: #89DB79;
-            position: relative;
-        }
         #wrap .logGet {
             opacity:0.8;
             height: 458px;
@@ -124,84 +142,40 @@
 
             font-size: 13px;
         }
-
-        .title {
-            font-family: "宋体";
-            color: #FFFFFF;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 45px;
-            height: 40px;
-            width: 50%;
-        }
-
-        .copyright {
-            font-family: "宋体";
-            color: #FFFFFF;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            height: 60px;
-            width: 40%;
-            text-align:center;
-        }
-
-
-        #foot .copyright .img {
-            width: 100%;
-            height: 24px;
-            position: relative;
-        }
-        .copyright .img .icon {
-            display: inline-block;
-            width: 24px;
-            height: 24px;
-            margin-left: 22px;
-            vertical-align: middle;
-            background-image: ;
-            background-repeat: no-repeat;
-            vertical-align: middle;
-            margin-right: 5px;
-        }
-
-        .copyright .img .icon1 {
-            display: inline-block;
-            width: 24px;
-            height: 24px;
-            margin-left: 22px;
-            vertical-align: middle;
-            background-image: ;
-            background-repeat: no-repeat;
-            vertical-align: middle;
-            margin-right: 5px;
-        }
-        .copyright .img .icon2 {
-            display: inline-block;
-            width: 24px;
-            height: 24px;
-            margin-left: 22px;
-            vertical-align: middle;
-            background-image: ;
-            background-repeat: no-repeat;
-            vertical-align: middle;
-            margin-right: 5px;
-        }
-        #foot .copyright p {
-            height: 24px;
-            width: 100%;
-        }
     </style>
-
 </head>
 
 <body>
-<div class="header" id="head">
-    <div class="title">微&nbsp;动</div>
-
+<div id="body">
+    <div id="head" class="row">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color: #8DC4F8">
+            <div class="container-fluid">
+                <div class="navbar-header col-lg-1 col-md-1 col-sm-1 col-xs-1" >
+                    <strong><a class="navbar-brand " href="#">微&nbsp;&nbsp;&nbsp;动</a></strong>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <ul class="nav navbar-nav " style="float:left;">
+                        <li><a href="#" >&nbsp;&nbsp;社&nbsp;团&nbsp;&nbsp;</a></li>
+                        <li><a href="#">&nbsp;活&nbsp;动&nbsp;&nbsp;</a></li>
+                        <li><a href="#">&nbsp;比&nbsp;赛</a></li>
+                    </ul>
+                </div>
+                <form class="navbar-form " role="search">
+                    <div class="form-group col-lg-3 col-md-5 col-sm-5 col-xs-5">
+                        <input type="text" class="form-control input-sm" placeholder="Search">
+                        <button type="submit" class="btn btn-default btn-sm">搜索</button>
+                </form>
+            </div>
+            <div class="" >
+                <button style="float:right; margin-left:10px" type="button" class="btn btn-default  btn-sm">注册</button>
+                <button style="float:right; " type="button" class="btn btn-default btn-sm">登陆</button>
+            </div>
+    </div>
+    </nav>
 </div>
+
+
+
 
 <div class="wrap" id="wrap">
     <div class="logGet">
@@ -233,25 +207,23 @@
     </div>
 </div>
 
-<div class="footer" id="foot">
-    <div class="copyright">
-        <p>Copyright © 2018 WEIDONG .</p>
-        <div class="img">
-            <i class="icon"></i><span>联系邮箱：Egoistest@163.com</span>
+
+
+
+
+<div id="foot" style="margin-top:35px;">
+    <nav class="navbar navbar-default navbar-fixed-bottm" role="navigation">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav nav-tabs-justified">
+                <li><a href="#">联系我们</a></li>
+                <li><a href="#">意见反馈</a></li>
+                <li><a href="#">学校链接</a></li>
+                <li><a href="#">企业合作</a></li>
+                <li><a href="#">帮助中心</a></li>
+            </ul>
         </div>
-
-        <div class="img">
-            <i class="icon1"></i><span>联系地址：江西师范大学</span>
-        </div>
-
-        <div class="img">
-            <i class="icon2"></i><span>联系电话：15107074401</span>
-        </div>
-
-
-    </div>
-
+    </nav>
 </div>
-
+</div>
 </body>
 </html>
